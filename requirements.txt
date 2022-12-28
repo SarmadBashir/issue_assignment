@@ -1,0 +1,5 @@
+numpy==1.23.3
+torch==1.10.0
+tokenizers==0.12.1
+transformers==4.21.2
+Flask==2.2.2
