@@ -72,7 +72,10 @@ def get_prediction(input_text, pipe):
 @app.route("/assigner", methods=['GET'])
 def run():
     
-    issue_text = request.args.get('issue_text', None)
+    #issue_text = request.args.get('issue_text', '')
+    data = request.get_json()
+    issue_text = data['text']
+    print(issue_text)
     if issue_text == '':
         return app.response_class(response='Provide valid input text',
                                   status=400,
@@ -97,4 +100,4 @@ def run():
     return response
 
 if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, use_reloader=False, host='0.0.0.0', port=5000)
