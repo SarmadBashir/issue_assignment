@@ -1,6 +1,6 @@
 ### GitHub issue assignment
 
-This repo contains the pipeline to assign github issues to their respective labels through fine-tuned BERT model. The model is pushed at: https://huggingface.co/SarmadBashir/Issue_Assignment. The pipeline will download and make the predictions from the model.
+This repo contains the pipeline to assign github issues to their respective labels through fine-tuned BERT model. The model is pushed at: https://huggingface.co/SarmadBashir/Issue_Assignment. The developed pipeline will download the model once to make the predictions.
 
 ### How to run?
 
@@ -9,8 +9,19 @@ This repo contains the pipeline to assign github issues to their respective labe
 3. Run the image as container: `docker run -p 5001:5000 -d vaadin`
 4. Check if the container is up and running: `docker ps`
 
-### Invoke the flask api running inside docker container
+### Invoke the Flask API running inside docker container
 
 ``` bash
-
+curl --location --request GET "http://127.0.0.1:5001/assigner" \
+--header "Content-Type: application/json" \
+--data-raw "{\"text\": \"improves compatibility with java and java there might also be other potentially important improvements in other versions\"}"
+```
+### Output
+```
+{
+    "prediction": {
+        "label": "enhancement",
+        "probability": 0.92
+    }
+}
 ```
