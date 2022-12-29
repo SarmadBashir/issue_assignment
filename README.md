@@ -1,6 +1,6 @@
 ### GitHub issue assignment
 
-This repo contains the pipeline to assign github issues to their respective labels through fine-tuned BERT model. The model is pushed at: https://huggingface.co/SarmadBashir/Issue_Assignment. The developed pipeline will download the model once to make the predictions.
+This repo contains the pipeline to assign github issues to their respective labels through fine-tuned BERT model. The model is pushed at: https://huggingface.co/SarmadBashir/Issue_Assignment. The developed pipeline will download the model once, in order to make the predictions.
 
 ### How to run?
 
