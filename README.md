@@ -30,7 +30,7 @@ curl --location --request GET "http://127.0.0.1:5001/assigner" \
 After preprocessing the provided datasets, following labels are trained and will be predicted by the pipeline:
 | Labels               | No. of training rows | 
 | -------------        |:-------------:       |
-| Bug                  | 1724        |
+| bug                  | 1724        |
 | enhancement          | 1304             |   
 | internal improvement | 212             |
 | hilla                | 197             |
